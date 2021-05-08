@@ -7,7 +7,7 @@ CONTORION TASK
 #### _SECTION 2: Automation_
 The task includes two scenarios of login. 
 One from homepage and the other from the login page.<br/> 
-Steps can be further parameterized.Tags are also added.
+Steps can be further parameterized. Tags are also added.
                                     They can be used to run specific test scenarios.<br/><br/>
 Credentials and other data are in a properties file and reached by a custom
 ``ConfigurationReader`` class.<br/><br/>
@@ -41,9 +41,3 @@ service is also available.<br/><br/>
        Then user should succesfully login
 ```          
 
-_#1 scenario methods are parameterized for versatility and reusability._\
-_#2 only "search" page is available. future page adding is possible._\
-_#3 any year(string) and "ab" or "bis" can be selected._\
-_#4 other sort options also can be entered ex:"Niedrigster Preis"._\
-_#5 any year(int) together with "newer" and "older" options are selectable._\
-_#6 "ascending" or "descending" options are available for verifying._
