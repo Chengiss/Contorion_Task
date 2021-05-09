@@ -62,14 +62,8 @@ public class LoginStepDefs {
         dashboard.inputPassword.sendKeys(ConfigurationReader.get("password"));
 
         String currentPage = Driver.get().getCurrentUrl();
-        System.out.println("1");
-
-
-
         if (!currentPage.equals(ConfigurationReader.get("homePageURL"))) {
-            System.out.println("2");
             dashboard.loginPageLogin.click();
-            System.out.println("3");
         }
         else {
             dashboard.homePageLogin.click();
@@ -79,8 +73,6 @@ public class LoginStepDefs {
     @Then("user should succesfully login")
     public void user_should_succesfully_login() {
         String expectedMessage = ConfigurationReader.get("loginSuccessMessage");
-        System.out.println(expectedMessage);
-        System.out.println("dashboard.successMessage.getText() = " + dashboard.successMessage.getText());
         Assert.assertEquals(expectedMessage, dashboard.successMessage.getText());
     }
 
